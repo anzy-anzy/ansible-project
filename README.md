@@ -91,12 +91,33 @@ $ sudo apt install ansible
 
 
   
-### Ping Test
-![Ping](./screenshots/ping_result.png)
-
-### Playbook Execution
-![Playbook](./screenshots/playbook_result.png)
 
 ---
 
-**Author:** Ebsiy Anslem
+## 📘 Conclusion
+
+This project successfully demonstrated the setup and automation capabilities of **Ansible** across multiple Linux environments.
+
+Starting from launching an **Ubuntu Controller** and four clients (**2× Ubuntu**, **2× Amazon Linux 2023**), SSH keys were used for secure connectivity, and the setup was verified using the **ping ad-hoc module**.
+
+The three-play Ansible playbook achieved the following:
+1. Deployed **Apache Webserver** on Ubuntu clients with a custom welcome message.
+2. Installed **Git** on Ubuntu clients.
+3. Used the **Debug** module to display the user’s name across **all managed hosts**.
+
+Through this exercise, we demonstrated how Ansible simplifies configuration management, package installation, and remote task execution with just a few lines of YAML — proving its efficiency for both small and large-scale automation.
+
+---
+
+## 🧩 Key Takeaways
+- ✅ Learned how to configure a centralized **Ansible Controller**.  
+- ✅ Practiced secure **SSH connectivity** between controller and clients.  
+- ✅ Applied **ad-hoc commands** and **playbooks** for automation.    
+
+---
+
+## 💬 Author
+**Ebsiy Anslem**  
+📍 Cloud & DevOps Engineer in Training  
+
+
