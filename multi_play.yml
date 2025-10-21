@@ -1,0 +1,58 @@
+---
+# ======================================================
+# PLAY 1: Install and Configure Apache on Ubuntu Clients
+# ======================================================
+- name: Deploy Apache Web Server on Ubuntu Clients
+  hosts: ubuntu-clients
+  become: yes
+  vars:
+    custom_message: "Hello from Ebsiy Anslem — Deployed via Ansible!"
+  tasks:
+    - name: Install Apache2 package
+      apt:
+        name: apache2
+        state: present
+        update_cache: yes
+
+    - name: Start and enable Apache service
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+
+    - name: Create a custom index.html page
+      copy:
+        dest: /var/www/html/index.html
+        content: |
+          <html>
+            <head><title>Ansible Apache Page</title></head>
+            <body style="font-family:Arial; text-align:center;">
+              <h1>{{ custom_message }}</h1>
+              <p>This page was deployed automatically by Ansible on {{ inventory_hostname }}</p>
+            </body>
+          </html>
+
+# ========================================
+# PLAY 2: Install Git on Ubuntu Clients
+# ========================================
+- name: Install Git on Ubuntu Clients
+  hosts: ubuntu-clients
+  become: yes
+  tasks:
+    - name: Install Git
+      apt:
+        name: git
+        state: present
+        update_cache: yes
+
+# =========================================
+# PLAY 3: Display Your Name on All Clients
+# =========================================
+- name: Display Name Using Debug Module
+  hosts: all
+  vars:
+    my_name: "Ebsiy Anslem"
+  tasks:
+    - name: Print my name on each host
+      debug:
+        msg: "Hello from {{ inventory_hostname }} — My name is {{ my_name }}"
