@@ -1,10 +1,38 @@
-## 🧠 Ansible Controller + 4 Clients (Lab)
+🧠 Homework 1 — Ansible Automation Project
+📘 Objective
 
-### 🎯 Objective
-Set up an Ansible Controller (Ubuntu) and four clients (2× Amazon Linux 2023, 2× Ubuntu).  
-Connection: Controller via Session Manager → Clients via SSH.
+Set up an Ansible Controller on Ubuntu and connect it to four client nodes (2 Amazon Linux 2023 and 2 Ubuntu).
+Then, write a playbook with three plays to automate Apache installation, Git setup, and display a custom debug message across all clients.
 
----
+🖥️ Project Overview
+🧩 Tasks
+
+Setup:
+
+Launch one Ubuntu EC2 instance as the Ansible Controller.
+
+Launch four client EC2 instances (2 Ubuntu + 2 Amazon Linux 2023).
+
+Configure SSH key-based authentication between the controller and all clients.
+
+Verify connections using the ping module.
+
+Playbook Requirements:
+
+PLAY 1: Deploy Apache Webserver on Ubuntu clients with a custom web page message.
+
+PLAY 2: Install Git on all Ubuntu clients.
+
+PLAY 3: Use the DEBUG module to display your name on all hosts using a variable.
+
+Submission:
+
+Push your playbook file to GitHub.
+
+Include screenshots showing successful execution and results.
+
+Export your output as a PDF file for submission.
+
 
 ### 🏗️ Architecture
 ```mermaid
