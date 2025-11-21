@@ -1,11 +1,11 @@
-🧠 Ansible Automation Project
-📘 Objective
+# 🧠 Ansible Automation Project
+### 📘 Objective
 
 Set up an Ansible Controller on Ubuntu and connect it to four client nodes (2 Amazon Linux 2023 and 2 Ubuntu).
 Then, write a playbook with three plays to automate Apache installation, Git setup, and display a custom debug message across all clients.
 
-🖥️ Project Overview
-🧩 Tasks
+### 🖥️ Project Overview
+### 🧩 Tasks
 
 Setup:
 
